@@ -1,28 +1,26 @@
 from PyQt5 import QtWidgets
-import main
+import vobla
+
 
 class MyWindow(QtWidgets.QWidget):
     def __init__(self):
         QtWidgets.QWidget.__init__(self)
-        self.ui = main.Ui_Form()
+        self.ui = vobla.Ui_Form()
         self.ui.setupUi(self)
-        self.ui.button_1.clicked.connect(self.sum)
-        self.ui.button_2.clicked.connect(self.clear)
+
+        self.ui.pushButton.clicked.connect(self.clear)
+        self.ui.pushButton_2.clicked.connect(self.sum)
 
     def sum(self):
-        a = float(self.ui.line.text())
-        b = float(self.ui.line_2.text())
-        c = float(self.ui.line_3.text())
-        d = float(self.ui.lin_4.text())
-        e = a + b + c + d
-        self.ui.line_5.setText(f"Сумма = {str(e)}")
-
+        a = float(self.ui.lineEdit.text())
+        b = float(self.ui.lineEdit_2.text())
+        c = a + b
+        self.ui.label_3.setText(f"Сумма = {str(c)}")
+    
     def clear(self):
-        self.ui.line.clear()
-        self.ui.line_2.clear()
-        self.ui.line_3.clear()
-        self.ui.lin_4.clear()
-        self.ui.line_5.setText(f"Сумма = ")
+        self.ui.lineEdit.clear()
+        self.ui.lineEdit_2.clear()
+        self.ui.label_3.setText(f"Сумма = ")
 
 if __name__ == "__main__":
     import sys
@@ -30,9 +28,3 @@ if __name__ == "__main__":
     window = MyWindow()
     window.show()
     sys.exit(app.exec_())
-
-
-
-        
-    
-    

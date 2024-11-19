@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QComboBox" name="comboBox">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>40</y>
+     <width>131</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>Австралия</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Бразилия</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Вьетнам </string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Индия</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Казахстан</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Канада</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Китай</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Монако</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>ОАЭ</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Пакистан</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Сирия</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>США</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Турция</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Швейцария</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Испания</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Норвегия</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Финляндия</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>100</y>
+     <width>111</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

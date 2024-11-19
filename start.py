@@ -1,4 +1,4 @@
-from PyQt5 import QtWidgets
+from PyQt5 import QtWidgets, QtCore, QtGui
 import main
 
 class MyWindow(QtWidgets.QWidget):
@@ -6,41 +6,45 @@ class MyWindow(QtWidgets.QWidget):
         QtWidgets.QWidget.__init__(self)
         self.ui = main.Ui_Form()
         self.ui.setupUi(self)
+        self.ui.push.clicked.connect(self.conver)
+
         
-        self.ui.click.clicked.connect(self.click_me)
-        self.ui.exit.clicked.connect(self.exit)
-        self.ui.programm.clicked.connect(self.about_programm)
-         
-    def click_me(self):
-        number_or_char = self.ui.input.text()
-        if len(number_or_char) == 0:
-            a = QtWidgets.QMessageBox.information(window, "Информация", "Вы ничего не ввели", 
-                                              buttons=QtWidgets.QMessageBox.Ok,
-                                              defaultButton=QtWidgets.QMessageBox.Ok)
-        if number_or_char == "1":
-            b = QtWidgets.QMessageBox.warning(window, "Предупреждение", "Действие может быть опасным. Продолжить?", 
-                                              buttons=QtWidgets.QMessageBox.Yes|QtWidgets.QMessageBox.No,
-                                              defaultButton=QtWidgets.QMessageBox.No)
-            if b == QtWidgets.QMessageBox.No:
-                self.ui.input.clear()
-                
-        if number_or_char == "2":
-            c = QtWidgets.QMessageBox.critical(window, "Критическая ошибка", "Недопустимая ошибка.Закрываю программу", 
-                                              buttons=QtWidgets.QMessageBox.Ok,
-                                              defaultButton=QtWidgets.QMessageBox.Ok)
-            if c == QtWidgets.QMessageBox.Ok:
-                sys.exit(app.quit)
         
-    def exit(self):
-        d = QtWidgets.QMessageBox.question(window, "Выход", "Вы действительно хотите выйти?", 
-                                              buttons=QtWidgets.QMessageBox.Yes|QtWidgets.QMessageBox.No,
-                                              defaultButton=QtWidgets.QMessageBox.No)
-        if d == QtWidgets.QMessageBox.Yes:
-            sys.exit(app.quit)
+        self.ui.line.setValidator(QtGui.QDoubleValidator())
+        self.ui.line.setValidator(
+            QtGui.QRegExpValidator(QtCore.QRegExp("[0-9]+[.][0-9]")))
         
-    def about_programm(self):
-        e = QtWidgets.QMessageBox.about(window, "О Программе", "QMessageBox\nАвтор: Бурдина Ксения")
-                                              
+        self.ui.line2.setValidator(QtGui.QRegExpValidator(QtCore.QRegExp("")))
+
+    
+    
+    def conver(self):
+        c = 0
+        a = float(self.ui.Iz.text())
+        if self.ui.Km1.isChecked() and self.ui.Km2.isChecked():
+            c = round(a, 2)
+        if self.ui.Km1.isChecked() and self.ui.M2.isChecked():
+            c = round((a * 1000), 2)
+        if self.ui.Km1.isChecked() and self.ui.Sm2.isChecked():
+            c = round((a * 100000), 3)
+
+
+        if self.ui.M1.isChecked() and self.ui.Km2.isChecked():
+            c = round((a*100), 2)
+        if self.ui.M1.isChecked() and self.ui.M2.isChecked():
+            c = round((a), 2)
+        if self.ui.M1.isChecked() and self.ui.Sm2.isChecked():
+            c = round((a / 1000), 2)
+
+        
+        if self.ui.Sm1.isChecked() and self.ui.Km2.isChecked():
+            c = round((a* 100000), 3)
+        if self.ui.Sm1.isChecked() and self.ui.M2.isChecked():
+            c = round((a*100), 2)
+        if self.ui.Sm1.isChecked() and self.ui.Sm2.isChecked():
+            c = round(a, 2)
+
+        self.ui.line2.setText(str(c))
 
 if __name__ == "__main__":
     import sys

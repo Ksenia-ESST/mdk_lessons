@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'vobla.ui'
+# Form implementation generated from reading ui file 'main.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.11
 #
@@ -14,31 +14,42 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
-        Form.resize(217, 300)
-        self.pushButton = QtWidgets.QPushButton(Form)
-        self.pushButton.setGeometry(QtCore.QRect(70, 230, 80, 25))
-        self.pushButton.setObjectName("pushButton")
-        self.pushButton_2 = QtWidgets.QPushButton(Form)
-        self.pushButton_2.setGeometry(QtCore.QRect(70, 190, 80, 25))
-        self.pushButton_2.setObjectName("pushButton_2")
-        self.lineEdit = QtWidgets.QLineEdit(Form)
-        self.lineEdit.setGeometry(QtCore.QRect(40, 70, 151, 20))
-        self.lineEdit.setObjectName("lineEdit")
-        self.lineEdit_2 = QtWidgets.QLineEdit(Form)
-        self.lineEdit_2.setGeometry(QtCore.QRect(40, 120, 151, 20))
-        self.lineEdit_2.setObjectName("lineEdit_2")
-        self.label = QtWidgets.QLabel(Form)
-        self.label.setGeometry(QtCore.QRect(40, 50, 71, 16))
-        self.label.setObjectName("label")
-        self.label_2 = QtWidgets.QLabel(Form)
-        self.label_2.setGeometry(QtCore.QRect(40, 100, 71, 16))
-        self.label_2.setObjectName("label_2")
-        self.label_3 = QtWidgets.QLabel(Form)
-        self.label_3.setGeometry(QtCore.QRect(40, 160, 151, 16))
-        self.label_3.setObjectName("label_3")
-        self.label_4 = QtWidgets.QLabel(Form)
-        self.label_4.setGeometry(QtCore.QRect(70, 20, 61, 16))
-        self.label_4.setObjectName("label_4")
+        Form.resize(379, 483)
+        self.mess = QtWidgets.QLabel(Form)
+        self.mess.setGeometry(QtCore.QRect(110, 30, 161, 41))
+        font = QtGui.QFont()
+        font.setFamily("Yu Gothic UI Semibold")
+        font.setPointSize(16)
+        font.setBold(True)
+        font.setWeight(75)
+        self.mess.setFont(font)
+        self.mess.setObjectName("mess")
+        self.click = QtWidgets.QPushButton(Form)
+        self.click.setGeometry(QtCore.QRect(40, 210, 291, 23))
+        self.click.setObjectName("click")
+        self.exit = QtWidgets.QPushButton(Form)
+        self.exit.setGeometry(QtCore.QRect(40, 260, 121, 23))
+        self.exit.setObjectName("exit")
+        self.programm = QtWidgets.QPushButton(Form)
+        self.programm.setGeometry(QtCore.QRect(220, 260, 111, 23))
+        self.programm.setObjectName("programm")
+        self.input = QtWidgets.QLineEdit(Form)
+        self.input.setGeometry(QtCore.QRect(30, 130, 331, 20))
+        self.input.setObjectName("input")
+        self.add_in_input = QtWidgets.QLabel(Form)
+        self.add_in_input.setGeometry(QtCore.QRect(30, 130, 181, 16))
+        palette = QtGui.QPalette()
+        brush = QtGui.QBrush(QtGui.QColor(152, 152, 152))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.WindowText, brush)
+        brush = QtGui.QBrush(QtGui.QColor(152, 152, 152))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.WindowText, brush)
+        brush = QtGui.QBrush(QtGui.QColor(120, 120, 120))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.WindowText, brush)
+        self.add_in_input.setPalette(palette)
+        self.add_in_input.setObjectName("add_in_input")
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
@@ -46,12 +57,11 @@ class Ui_Form(object):
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Form"))
-        self.pushButton.setText(_translate("Form", "Очистить"))
-        self.pushButton_2.setText(_translate("Form", "Сложить"))
-        self.label.setText(_translate("Form", "Первое число"))
-        self.label_2.setText(_translate("Form", "Второе число"))
-        self.label_3.setText(_translate("Form", "СУММА ="))
-        self.label_4.setText(_translate("Form", "СЛОЖЕНИЕl"))
+        self.mess.setText(_translate("Form", "MessageBox"))
+        self.click.setText(_translate("Form", "Нажми!"))
+        self.exit.setText(_translate("Form", "Выход"))
+        self.programm.setText(_translate("Form", "О программе"))
+        self.add_in_input.setText(_translate("Form", "Введите сообщение"))
 
 
 if __name__ == "__main__":

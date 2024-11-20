@@ -7,147 +7,88 @@
     <x>0</x>
     <y>0</y>
     <width>400</width>
-    <height>529</height>
+    <height>501</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QGroupBox" name="Box">
+  <widget class="QLineEdit" name="line1">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>260</y>
-     <width>121</width>
-     <height>101</height>
+     <x>120</x>
+     <y>300</y>
+     <width>141</width>
+     <height>21</height>
     </rect>
    </property>
-   <property name="title">
-    <string>Из</string>
-   </property>
-   <widget class="QRadioButton" name="Km1">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>20</y>
-      <width>82</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Км</string>
-    </property>
-   </widget>
-   <widget class="QRadioButton" name="M1">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>40</y>
-      <width>82</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>М</string>
-    </property>
-   </widget>
-   <widget class="QRadioButton" name="Cm1">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>60</y>
-      <width>82</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>См</string>
-    </property>
-   </widget>
   </widget>
-  <widget class="QGroupBox" name="Box2">
+  <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>260</y>
-     <width>120</width>
-     <height>101</height>
+     <x>100</x>
+     <y>40</y>
+     <width>201</width>
+     <height>61</height>
     </rect>
    </property>
-   <property name="title">
-    <string>В</string>
+   <property name="styleSheet">
+    <string notr="true">font: 28pt &quot;Sitka Heading&quot;;</string>
    </property>
-   <widget class="QRadioButton" name="Km2">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>20</y>
-      <width>82</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Км</string>
-    </property>
-   </widget>
-   <widget class="QRadioButton" name="M2">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>40</y>
-      <width>82</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>М</string>
-    </property>
-   </widget>
-   <widget class="QRadioButton" name="Cm2">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>60</y>
-      <width>82</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>См</string>
-    </property>
-   </widget>
+   <property name="text">
+    <string>InputDialog</string>
+   </property>
   </widget>
-  <widget class="QPushButton" name="push">
+  <widget class="QPushButton" name="push4">
    <property name="geometry">
     <rect>
-     <x>140</x>
-     <y>400</y>
-     <width>75</width>
+     <x>120</x>
+     <y>260</y>
+     <width>141</width>
      <height>23</height>
     </rect>
    </property>
    <property name="text">
-    <string>Перевести</string>
+    <string>Выбор пункта из списка</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="line">
+  <widget class="QPushButton" name="push1">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>240</y>
-     <width>113</width>
-     <height>20</height>
+     <x>120</x>
+     <y>140</y>
+     <width>141</width>
+     <height>23</height>
     </rect>
    </property>
+   <property name="text">
+    <string>Ввод строки</string>
+   </property>
   </widget>
-  <widget class="QLineEdit" name="line2">
+  <widget class="QPushButton" name="push2">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>240</y>
-     <width>113</width>
-     <height>20</height>
+     <x>120</x>
+     <y>180</y>
+     <width>141</width>
+     <height>23</height>
     </rect>
+   </property>
+   <property name="text">
+    <string>Ввод целого числа</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="push3">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>220</y>
+     <width>141</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Ввод вещ. числа</string>
    </property>
   </widget>
  </widget>

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'untitled.ui'
+# Form implementation generated from reading ui file 'unt.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.10
 #
@@ -11,48 +11,67 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Ui_Form(object):
-    def setupUi(self, Form):
-        Form.setObjectName("Form")
-        Form.resize(400, 501)
-        self.line1 = QtWidgets.QLineEdit(Form)
-        self.line1.setGeometry(QtCore.QRect(120, 300, 141, 21))
-        self.line1.setObjectName("line1")
-        self.label = QtWidgets.QLabel(Form)
-        self.label.setGeometry(QtCore.QRect(100, 40, 201, 61))
-        self.label.setStyleSheet("font: 28pt \"Sitka Heading\";")
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        MainWindow.setObjectName("MainWindow")
+        MainWindow.resize(798, 497)
+        self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget.setObjectName("centralwidget")
+        self.label = QtWidgets.QLabel(self.centralwidget)
+        self.label.setGeometry(QtCore.QRect(40, 20, 81, 21))
+        self.label.setText("")
         self.label.setObjectName("label")
-        self.push4 = QtWidgets.QPushButton(Form)
-        self.push4.setGeometry(QtCore.QRect(120, 260, 141, 23))
-        self.push4.setObjectName("push4")
-        self.push1 = QtWidgets.QPushButton(Form)
-        self.push1.setGeometry(QtCore.QRect(120, 140, 141, 23))
-        self.push1.setObjectName("push1")
-        self.push2 = QtWidgets.QPushButton(Form)
-        self.push2.setGeometry(QtCore.QRect(120, 180, 141, 23))
-        self.push2.setObjectName("push2")
-        self.push3 = QtWidgets.QPushButton(Form)
-        self.push3.setGeometry(QtCore.QRect(120, 220, 141, 23))
-        self.push3.setObjectName("push3")
+        self.label_2 = QtWidgets.QLabel(self.centralwidget)
+        self.label_2.setGeometry(QtCore.QRect(340, 0, 441, 461))
+        self.label_2.setText("")
+        self.label_2.setPixmap(QtGui.QPixmap(":/photo/photo.jpg"))
+        self.label_2.setScaledContents(True)
+        self.label_2.setObjectName("label_2")
+        self.textEdit = QtWidgets.QTextEdit(self.centralwidget)
+        self.textEdit.setGeometry(QtCore.QRect(20, 120, 301, 341))
+        self.textEdit.setObjectName("textEdit")
+        self.menubar = QtWidgets.QMenuBar(MainWindow)
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 798, 21))
+        self.menubar.setObjectName("menubar")
+        self.menu = QtWidgets.QMenu(self.menubar)
+        self.menu.setObjectName("menu")
+        self.menu_2 = QtWidgets.QMenu(self.menubar)
+        self.menu_2.setObjectName("menu_2")
+        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        self.statusbar.setObjectName("statusbar")
+        self.action = QtWidgets.QAction(MainWindow)
+        self.action.setObjectName("action")
+        self.action_2 = QtWidgets.QAction(MainWindow)
+        self.action_2.setObjectName("action_2")
+        self.actionOpen_file = QtWidgets.QAction(MainWindow)
+        self.actionOpen_file.setObjectName("actionOpen_file")
+        self.menu.addAction(self.action)
+        self.menu.addAction(self.action_2)
+        self.menu_2.addAction(self.actionOpen_file)
+        self.menubar.addAction(self.menu.menuAction())
+        self.menubar.addAction(self.menu_2.menuAction())
 
-        self.retranslateUi(Form)
-        QtCore.QMetaObject.connectSlotsByName(Form)
+        self.retranslateUi(MainWindow)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
-    def retranslateUi(self, Form):
+    def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        Form.setWindowTitle(_translate("Form", "Form"))
-        self.label.setText(_translate("Form", "InputDialog"))
-        self.push4.setText(_translate("Form", "Выбор пункта из списка"))
-        self.push1.setText(_translate("Form", "Ввод строки"))
-        self.push2.setText(_translate("Form", "Ввод целого числа"))
-        self.push3.setText(_translate("Form", "Ввод вещ. числа"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        self.menu.setTitle(_translate("MainWindow", "Меню"))
+        self.menu_2.setTitle(_translate("MainWindow", "Файл"))
+        self.action.setText(_translate("MainWindow", "О программе"))
+        self.action.setShortcut(_translate("MainWindow", "Ctrl+I, Esc"))
+        self.action_2.setText(_translate("MainWindow", "Выход"))
+        self.action_2.setShortcut(_translate("MainWindow", "Ctrl+U, Esc"))
+        self.actionOpen_file.setText(_translate("MainWindow", "Open file"))
+import my_photo
 
 
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
-    Form = QtWidgets.QWidget()
-    ui = Ui_Form()
-    ui.setupUi(Form)
-    Form.show()
+    MainWindow = QtWidgets.QMainWindow()
+    ui = Ui_MainWindow()
+    ui.setupUi(MainWindow)
+    MainWindow.show()
     sys.exit(app.exec_())

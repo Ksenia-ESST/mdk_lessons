@@ -1,36 +1,27 @@
 from PyQt5 import QtWidgets
+from PyQt5.QtWidgets import QFileDialog
 import main
 
 class MyWindow(QtWidgets.QWidget):
     def __init__(self):
         QtWidgets.QWidget.__init__(self)
-        self.ui = main.Ui_Form()
+        self.ui = main.Ui_MainWindow()
         self.ui.setupUi(self)
+        self.ui.action.triggered.connect(app.quit)
+        self.ui.action_2.triggered.connect(self.avtor)
+        self.ui.actionOpen_file.triggered.connect(self.open_file)
+        
 
-        self.ui.push1.clicked.connect(self.Text)
-        self.ui.push2.clicked.connect(self.Int)
-        self.ui.push3.clicked.connect(self.Double)
-        self.ui.push4.clicked.connect(self.Item)
+    def avtor(self):
+        self.ui.label.setText("ИП 24-26Б")
 
-    def Text(self):
-        text, ok = QtWidgets.QInputDialog.getText(window, "Заголовок", "Подсказка", echo = 0 )
-        if ok:
-            self.ui.line1.setText(str(text))
-
-    def Int(self):
-        c_chislo, ok = QtWidgets.QInputDialog.getInt(window, "Заголовок", "Подсказка", min = 0, max = 10, step = 1 )
-        if ok:
-            self.ui.line1.setText(str(c_chislo))
-
-    def Double(self):
-        v_chislo, ok = QtWidgets.QInputDialog.getDouble(window, "Заголовок", "Подсказка", min = 0, max = 10, decimals = 3 )
-        if ok:
-            self.ui.line1.setText(str(v_chislo))
-
-    def Item(self):
-        item, ok = QtWidgets.QInputDialog.getItem(window, "Заголовок", "Подсказка", ["Пункт 1", "Пункт 2", "Пункт 3"], current = 0, editable = False)
-        if ok:
-            self.ui.line1.setText(str(item))
+    def open_file(self):
+        options = QFileDialog.Options()
+        file_name, _ = QFileDialog.getOpenFileName(self, "Open file", "", "All Files (*);;Text Files (*.txt)", options=options)
+        if file_name:
+            with open(file_name, 'r', encoding='utf-8') as file:
+                content = file.read()
+                self.ui.textEdit.setPlainText(content)
 
 if __name__ == "__main__":
     import sys

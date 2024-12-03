@@ -6,145 +6,34 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>477</height>
+    <width>480</width>
+    <height>442</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QLabel" name="label">
+  <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>80</x>
-     <y>10</y>
-     <width>241</width>
-     <height>40</height>
+     <x>180</x>
+     <y>260</y>
+     <width>101</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="text">
-    <string>Нахождение площади параллелограмма</string>
+    <string>Запустить</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="line">
+  <widget class="QLineEdit" name="lineEdit">
    <property name="geometry">
     <rect>
-     <x>140</x>
-     <y>80</y>
-     <width>113</width>
-     <height>20</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QWidget" name="verticalLayoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>120</x>
-     <y>340</y>
-     <width>160</width>
-     <height>94</height>
-    </rect>
-   </property>
-   <layout class="QVBoxLayout" name="verticalLayout">
-    <item>
-     <widget class="QPushButton" name="button1">
-      <property name="text">
-       <string>посчитать</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="button2">
-      <property name="text">
-       <string>очистить</string>
-      </property>
-     </widget>
-    </item>
-   </layout>
-  </widget>
-  <widget class="QLabel" name="label2">
-   <property name="geometry">
-    <rect>
-     <x>40</x>
-     <y>120</y>
-     <width>81</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>высота</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label1">
-   <property name="geometry">
-    <rect>
-     <x>40</x>
-     <y>80</y>
-     <width>81</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>сторона a</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="line2">
-   <property name="geometry">
-    <rect>
-     <x>140</x>
-     <y>120</y>
-     <width>113</width>
-     <height>20</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="line3">
-   <property name="geometry">
-    <rect>
-     <x>120</x>
-     <y>300</y>
+     <x>160</x>
+     <y>160</y>
      <width>161</width>
-     <height>20</height>
+     <height>21</height>
     </rect>
-   </property>
-  </widget>
-  <widget class="QCheckBox" name="check">
-   <property name="geometry">
-    <rect>
-     <x>50</x>
-     <y>180</y>
-     <width>141</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Удвоить площадь</string>
-   </property>
-  </widget>
-  <widget class="QCheckBox" name="check2">
-   <property name="geometry">
-    <rect>
-     <x>50</x>
-     <y>210</y>
-     <width>171</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Делить площадь на два</string>
-   </property>
-  </widget>
-  <widget class="QCheckBox" name="check3">
-   <property name="geometry">
-    <rect>
-     <x>50</x>
-     <y>240</y>
-     <width>151</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Площадь в квадрате</string>
    </property>
   </widget>
  </widget>

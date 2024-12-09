@@ -14,14 +14,32 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
-        Form.resize(615, 502)
+        Form.resize(561, 403)
         self.label = QtWidgets.QLabel(Form)
-        self.label.setGeometry(QtCore.QRect(220, 160, 141, 61))
+        self.label.setGeometry(QtCore.QRect(20, 20, 521, 321))
         self.label.setText("")
+        self.label.setTextFormat(QtCore.Qt.AutoText)
+        self.label.setPixmap(QtGui.QPixmap(":/my_photo/my_photo.png"))
+        self.label.setScaledContents(True)
         self.label.setObjectName("label")
-        self.pushButton = QtWidgets.QPushButton(Form)
-        self.pushButton.setGeometry(QtCore.QRect(220, 320, 121, 41))
-        self.pushButton.setObjectName("pushButton")
+        self.push = QtWidgets.QPushButton(Form)
+        self.push.setGeometry(QtCore.QRect(400, 140, 101, 41))
+        self.push.setObjectName("push")
+        self.progressBar = QtWidgets.QProgressBar(Form)
+        self.progressBar.setGeometry(QtCore.QRect(20, 360, 521, 21))
+        self.progressBar.setStyleSheet("QProgressBar{\n"
+"    border: 2px solid grey;\n"
+"    border-radius: 5px;\n"
+"    text-align: center\n"
+"}\n"
+"\n"
+"QProgressBar::chunk {\n"
+"    background-color: black;\n"
+"    width: 10px;\n"
+"    margin: 1px;\n"
+"}")
+        self.progressBar.setProperty("value", 24)
+        self.progressBar.setObjectName("progressBar")
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
@@ -29,7 +47,8 @@ class Ui_Form(object):
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Form"))
-        self.pushButton.setText(_translate("Form", "Начать"))
+        self.push.setText(_translate("Form", "загрузить"))
+import my_photo
 
 
 if __name__ == "__main__":

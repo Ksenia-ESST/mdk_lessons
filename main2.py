@@ -14,13 +14,13 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
-        Form.resize(480, 442)
+        Form.resize(488, 394)
+        self.label = QtWidgets.QLabel(Form)
+        self.label.setGeometry(QtCore.QRect(160, 120, 161, 21))
+        self.label.setObjectName("label")
         self.pushButton = QtWidgets.QPushButton(Form)
-        self.pushButton.setGeometry(QtCore.QRect(180, 260, 101, 41))
+        self.pushButton.setGeometry(QtCore.QRect(180, 200, 101, 23))
         self.pushButton.setObjectName("pushButton")
-        self.lineEdit = QtWidgets.QLineEdit(Form)
-        self.lineEdit.setGeometry(QtCore.QRect(160, 160, 161, 21))
-        self.lineEdit.setObjectName("lineEdit")
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
@@ -28,7 +28,8 @@ class Ui_Form(object):
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Form"))
-        self.pushButton.setText(_translate("Form", "Запустить"))
+        self.label.setText(_translate("Form", "Некорректный ввод данных"))
+        self.pushButton.setText(_translate("Form", "ОК"))
 
 
 if __name__ == "__main__":

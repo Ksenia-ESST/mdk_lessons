@@ -6,34 +6,37 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>480</width>
-    <height>442</height>
+    <width>488</width>
+    <height>394</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>120</y>
+     <width>161</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Некорректный ввод данных</string>
+   </property>
+  </widget>
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
      <x>180</x>
-     <y>260</y>
+     <y>200</y>
      <width>101</width>
-     <height>41</height>
+     <height>23</height>
     </rect>
    </property>
    <property name="text">
-    <string>Запустить</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit">
-   <property name="geometry">
-    <rect>
-     <x>160</x>
-     <y>160</y>
-     <width>161</width>
-     <height>21</height>
-    </rect>
+    <string>ОК</string>
    </property>
   </widget>
  </widget>

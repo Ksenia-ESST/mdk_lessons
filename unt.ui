@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>615</width>
-    <height>502</height>
+    <width>561</width>
+    <height>403</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,30 +16,67 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>220</x>
-     <y>160</y>
-     <width>141</width>
-     <height>61</height>
+     <x>20</x>
+     <y>20</y>
+     <width>521</width>
+     <height>321</height>
     </rect>
    </property>
    <property name="text">
     <string/>
    </property>
+   <property name="textFormat">
+    <enum>Qt::AutoText</enum>
+   </property>
+   <property name="pixmap">
+    <pixmap>:/my_photo/my_photo.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="push">
    <property name="geometry">
     <rect>
-     <x>220</x>
-     <y>320</y>
-     <width>121</width>
+     <x>400</x>
+     <y>140</y>
+     <width>101</width>
      <height>41</height>
     </rect>
    </property>
    <property name="text">
-    <string>Начать</string>
+    <string>загрузить</string>
+   </property>
+  </widget>
+  <widget class="QProgressBar" name="progressBar">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>360</y>
+     <width>521</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QProgressBar{
+    border: 2px solid grey;
+    border-radius: 5px;
+    text-align: center
+}
+
+QProgressBar::chunk {
+    background-color: black;
+    width: 10px;
+    margin: 1px;
+}</string>
+   </property>
+   <property name="value">
+    <number>24</number>
    </property>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="my_photo..qrc"/>
+ </resources>
  <connections/>
 </ui>
